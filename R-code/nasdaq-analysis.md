@@ -94,8 +94,9 @@ addSMA(n=30,on=1,col = "blue")
 addSMA(n=200,on=1,col = "red")
 ```
 
-![](nasdaq-analysis_files/figure-gfm/unnamed-chunk-5-3.png)<!-- --> \##
-Moving average convergence/divergence (MACD)
+![](nasdaq-analysis_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
+
+## Moving average convergence/divergence (MACD)
 
 ``` r
 chartSeries(NDQ.AX,
@@ -137,9 +138,10 @@ We buy if the price increase is compared to previous day exceeds a
 threshold $\delta$
 
 $$\text{Buy}:\frac{P_t}{P_{t-1}}>1+\delta$$
+
 $$\text{signal}= \begin{cases}
 0 &\text{if not buy},   \\
-1 &\text{if buy}.   \end{cases}$$
+1 &\text{if buy}\end{cases}$$
 
 ``` r
 price <- Cl(NDQ.AX) # close price
